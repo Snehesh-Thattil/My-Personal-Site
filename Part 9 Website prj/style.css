@@ -1,0 +1,225 @@
+
+body{
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    background-image: url(images/poduct\ bg.png);
+    background-size: cover;
+    overflow-x: hidden;
+    /*background-size: 100% 100em;*/
+    /* background-repeat:repeat-y;*/
+}
+.logo-front{
+    width: 2em;
+    margin-left: 2.5em;
+}
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+.navbar-nav{
+    margin-left: auto;
+}
+.nav-link{
+    color: black;
+    font-weight: bold;
+    margin-left: 1.5em;
+}
+.navbar{
+    background-color: #98d5eb;
+    margin: .75em;
+    border-radius: .5em;
+}
+#section-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-bottom: 3em;
+}
+#front-name{
+    color: rgb(31, 29, 29);
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 3em;
+    /*margin-top: 0;*/
+}
+#front-wish{
+    color: rgb(97, 90, 90);
+    font-family: sans-serif;
+    font-weight:bold ;
+    font-size: 1.5em;
+    margin-top: 1em;
+    padding-top: 2.5em;
+    /*margin-bottom: 0;*/
+}
+#font-describe{
+    color: rgb(46, 43, 43);
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: justify;
+    width: 28em;
+    padding-right: 1em;
+}
+.out-box{
+    padding-left: 5em;
+    padding-top: 3em;
+}
+.box{
+    position: relative;
+    width: 20em;
+    height: 20em;
+    border-radius: 50%;
+    transition: 1s;
+    background: white;
+    overflow: hidden;
+}
+.box::before{
+    content: '';
+    position: absolute;
+    inset: -10px 100px;
+    background: linear-gradient(315deg,#00ccff,#d400d4);
+    transition: 1s;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.box:hover::before{
+    inset: -20px 0px;
+}
+.box::after{
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    background-color: skyblue;
+    z-index: 1;
+}
+.content{
+    position: absolute;
+    inset: 12px;
+    border: 6px solid white;
+    z-index: 3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+}
+.content img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    object-fit: cover;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.box:hover .content img{
+    opacity: 0;
+}
+.content h2{
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.07em;
+}
+.content h2 span{
+    font-size: 0.75;
+    font-weight: 300;
+}
+.content a{
+    position: relative;
+    color: black;
+    background: white;
+    font-size: 1.25em;
+    font-weight: 500;
+    border-radius: 25px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.content a:hover{
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+#section-services{
+    padding-top: 5em;
+    background-color: aliceblue;
+}
+#section-services h2{
+    text-align: center;
+    margin: 1em 1em;
+}
+.card{
+
+    /*width: 15em;
+    height: 22em;
+    float: left;*/
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    margin-bottom: 2em;
+    align-items: center;
+}
+.card-img-top{
+    width: 8em;
+    height: 8em;
+}
+.card-body{
+    text-align: center;
+}
+.card-body p{
+    text-align: justify;
+}
+#section-projects{
+    padding-top: 5em;
+    padding-bottom: 5em;
+    background-color: rgb(227, 236, 243);
+}
+#section-projects h2{
+    text-align: center;
+    margin: 1em 1em;
+}
+form{
+    justify-content: center;
+}
+#section-contact h2{
+    text-align: center;
+    margin: 1em 1em;
+}
+
+#contact-sub-btn{
+    width: 50%;
+}
+.footer{
+    background-color: skyblue;
+    height: 10em;
+    margin: 3em 1em 2em 1em;
+    border-radius: 5px;
+}
+.s-media{
+    width: 1.5em;
+    height: 1.5em;
+    margin: 1em;
+}
+#section-contact{
+    padding-top: 4em;
+    padding-bottom: 3em;
+}
